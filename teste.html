@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feira de Ciências - CETEP-BRG</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=MedievalSharp:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+ @font-face {
+            font-family: 'meditive';
+            src: url('Meditative.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+}
+
+ body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #fee9c5;
+}
+
+header {
+            background-color: #436c8d;
+            color: #fee9c5;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            z-index: 1000;
+}
+
+.logo {
+            background-color: #333;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+}
+
+.logo img {
+            width: 100%;
+            height: auto;
+}
+
+header h1 {
+            font-family: 'meditive', serif;
+            font-size: 2.5em;
+            margin: 0;
+}
+
+nav {
+            position: fixed;
+            top: 100px;
+            width: 100%;
+            background-color: #004d99;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+}
+
+nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+}
+
+nav ul li {
+            margin: 0 15px;
+}
+
+nav ul li a {
+            color: #fee9c5;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+            display: inline-block;
+}
+
+nav ul li a:hover {
+            background-color: #003d80;
+            border-radius: 5px;
+}
+
+.image {
+            width: 90% auto;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 160px;
+}
+
+.slide {
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: opacity 1s ease-in-out;
+}
+
+.slide.show {
+            opacity: 1;
+}
+
+.slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+}
+
+.container {
+            width: 90%;
+            margin: 20px auto;
+            background-color: #7fa6ca;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container h2 {
+            background-color: #436c8d;
+            color: #fee9c5;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+}
+
+.info {
+            font-size: 1.4em;
+            font-family: 'meditive', serif;
+}
+
+.project-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+}
+
+.project {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            text-align: center;
+            flex: 1 1 calc(33% - 40px);
+}
+
+.project img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+}
+
+footer {
+            background-color: #004d99;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header   -->
+    <header>
+        <div class="logo">
+            <img src="LOGO ciencia.png" alt="logo">
+        </div>
+        <h1>Feira de Ciências - CETEP-BRG</h1>
+    </header>
+
+    <!-- Navegação   -->
+    <nav>
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#info">Informações</a></li>
+            <li><a href="#live">Ao Vivo</a></li>
+            <li><a href="#projects">Projetos</a></li>
+        </ul>
+    </nav>
+
+    <!-- Slideshow  -->
+    <div class="image" id="home">
+        <div class="slide show">
+            <img src="WhatsApp Image 2024-07-31 at 08.44.28.jpeg" alt="Foto 1">
+        </div>
+        <div class="slide">
+            <img src="fotozap2.jpeg" alt="Foto 2">
+        </div>
+        <div class="slide">
+            <img src="ZAP3.jpeg" alt="Foto 3">
+        </div>
+    </div>
+
+<!-- Texto inicial -->
+<div class="container" id="info">
+<section class="info">
+            <h2>Bem-vindo à Feira de Ciências!</h2>
+            <p>É com grande entusiasmo e alegria que recebemos vocês na nossa 12° Feira de Ciências do Cetep-BRG que celebra a curiosidade, a inovação e o conhecimento. Aqui, nossos talentosos estudantes apresentam projetos que refletem meses de dedicação, criatividade e trabalho árduo.
+                <br><br>
+                A Feira de Ciências é uma oportunidade única para explorar ideias fascinantes, descobrir novas perspectivas e apreciar o incrível potencial que a ciência tem para transformar o mundo ao nosso redor. Cada estande representa uma jornada de aprendizado e uma paixão pelo saber.
+                <br><br>
+                Agradecemos a presença de todos – pais, professores, amigos e comunidades – por apoiarem e incentivarem nossos jovens cientistas. Esperamos que este evento seja inspirador e cheio de descobertas para todos.
+                <br><br>
+                Aproveitem a feira!</p>
+</section>
+</div>
+
+<!-- Area do Ao vivo   -->
+<div class="container" id="live">
+<section class="info">
+            <h2>Ao Vivo</h2>
+            <p>Assista ao vivo a live da Feira de Ciências CETEP-BRG</p>
+
+<!-- Link ao vivo -->
+
+    <iframe width="1700" height="700" src="https://www.youtube.com/embed/T-SU0bfyJfU?si=LPQkUVBxujHNeR0e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</section>
+</div>
+
+<!-- Area de Stands   -->
+<div class="container" id="projects">
+<section class="info">
+<h2>Stands</h2>
+<div class="project-gallery">
+<div class="project">
+
+                    <img src="OIP (1).jpg" alt="Projeto 1">
+                    <p>Descrição do Projeto 1</p>
+
+</div>
+<div class="project">
+
+                    <img src="OIP (1).jpg" alt="Projeto 2">
+                    <p>Descrição do Projeto 2</p>
+
+</div>
+<div class="project">
+
+                    <img src="OIP (1).jpg" alt="Projeto 1">
+                    <p>Descrição do Projeto 3</p>
+
+</div>
+<div class="project">
+
+                    <img src="OIP (1).jpg"alt="Projeto 2">
+                    <p>Descrição do Projeto 4</p>
+
+</div>
+<div class="project">
+
+                    <img src="OIP (1).jpg" alt="Projeto 1">
+                    <p>Descrição do Projeto 5</p>
+
+</div>
+<div class="project">
+
+                    <img src="OIP (1).jpg" alt="Projeto 2">
+                    <p>Descrição do Projeto 6</p>
+
+</div>
+<div class="project">
+
+                    <img src="OIP (1).jpg" alt="Projeto 1">
+                    <p>Descrição do Projeto 7</p>
+
+</div>
+</div>
+</section>
+</div>
+
+<br><br><br><br><br>
+
+    <footer>
+        <p>&copy; 2024 CETEP-BRG. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script para Slideshow by palitin and chat gpt -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            const slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove('show');
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].classList.add('show');
+            setTimeout(showSlides, 5000);
+        }
+    </script>
+</body>
+
+</html>
